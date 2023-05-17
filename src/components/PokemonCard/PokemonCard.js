@@ -1,7 +1,7 @@
 import React from "react";
-import {Container,PokemonNumber, PokemonName, PokemonType, TypesContainer, Pokeball, CatchButton, Pokemon} from './styles'
+import { Container, PokemonNumber, PokemonName, PokemonType, TypesContainer, Pokeball, CatchButton, Pokemon } from './styles'
 import pokeball from '../../assets/pngwing 2.png'
-import {getTypes} from '../../utils/ReturnPokemonType'
+import { getTypes } from '../../utils/ReturnPokemonType'
 
 
 const PokemonCard = (props) => {
@@ -11,9 +11,9 @@ const PokemonCard = (props) => {
         <PokemonNumber>{props.pokemon.id}</PokemonNumber>
         <PokemonName>{props.pokemon.name.english}</PokemonName>
         <TypesContainer>
-            {props.pokemon.type.map((type) => {
-                return <PokemonType key={type} src={getTypes(type)} alt='' />
-            })}
+          {props.pokemon.type.map((type) => {
+            return <PokemonType key={type} src={getTypes(type)} alt='' />
+          })}
         </TypesContainer>
         <p>Detalhes</p>
       </div>
